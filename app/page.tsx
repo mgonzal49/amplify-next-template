@@ -42,6 +42,7 @@ export default function App() {
     <Authenticator>
       {({ signOut, user }) => (
         <main>
+          <h1>{user?.signInDetails?.loginId}'s todos</h1>
           <h1>My todos</h1>
           <button onClick={createTodo}>+ new</button>
           <ul>
@@ -58,6 +59,7 @@ export default function App() {
               Review next steps of this tutorial.
             </a>
           </div>
+          <button onClick={signOut}>Sign out</button>
         </main>
         )}
     </Authenticator>
